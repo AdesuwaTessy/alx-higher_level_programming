@@ -1,27 +1,14 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
+"""this module defines a class MyInt that inherits from int"""
 
 
 class MyInt(int):
-    """
-    A class that inherits from int
-    """
-    def __eq__(self, num):
-        """
-        equal function for MyInt class
-        Attributes:
-            num (int): an inputed integer
-        Returns:
-            The opositive booleanof the input
-        """
-        return (int(self) != num)
+    """Invert int operators == and !="""
 
-    def __ne__(self, num):
-        """
-        no equal function for MyInt class
-        Attributes:
-            num (int): an inputed integer
-        Returns:
-            The opositive booleanof the input
-        """
-        return (int(self) == num)
+    def __eq__(self, value):
+        """Override == opeartor with != behavior"""
+        return self.real != value
+
+    def __ne__(self, value):
+        """Override != operator with == behavior"""
+        return self.real == value
