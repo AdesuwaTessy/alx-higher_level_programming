@@ -1,54 +1,41 @@
 #!/usr/bin/python3
-# Square class file which implements Rectangle by - Adesuwa Usenbor
-
-''' Import rectangle class '''
-from rectangle import Rectangle
+"""
+    contains class Square implements class Rectangle
+"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-
-
+    """
+        Square implements rectangle
+    """
     def __init__(self, size, x=0, y=0, id=None):
+        """
+            initialises Square (overrides Rectangle init)
+        """
+        super().__init__(size, size, x, y, id)
 
-    ''' 
-        Initialze square
-    '''
-        super().__init__(id)
-        super().__init__(size)
-        super().__init(size)
-        super().__init__(x)
-        super.()__init__(y)
+    @property
+    def size(self):
+        """
+            returns the size of the square
+        """
+        return self.width
 
-@property
-def size(self):
+    @size.setter
+    def size(self, value):
+        """
+            sets the value of size
+        """
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
 
-    '''
-        getter for attribute "height"
-        returns: height
-    '''
+        self.width = value
+        self.height = value
 
-    return self.__width
-
-@size.setter
-def size(self, value):
-
-    '''
-        setter for attribute "height"
-        returns: an integer value for height
-    '''
-
-    ''' check if value is integer '''
-
-    if type(value) != int:
-        raise TypeError("height must be an integer")
-
-    if value <= 0:
-        raise ValueError("height must be > 0")
-
-    self.height = value
-    self.weight = value
-
-def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """
             assigns key/value argument to attributes
             kwargs is skipped if args is not empty
