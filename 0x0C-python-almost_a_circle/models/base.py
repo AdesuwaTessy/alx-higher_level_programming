@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Base class - Created by Adesuwa Usenbor
+# Base class
 
 ''' Create a Base class '''
 
