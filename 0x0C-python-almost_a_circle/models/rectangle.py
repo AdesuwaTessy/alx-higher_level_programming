@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Rectangle class file written by - Adesuwa Usenbor
+# Rectangle class file
 
 '''Importing Base class from base file '''
 
